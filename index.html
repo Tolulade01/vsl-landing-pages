@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>V.S.L Concepts | Business Hosting</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #14213d;
+      background: #f6f8fb;
+      line-height: 1.6;
+    }
+
+    .sample-banner {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 12px;
+      letter-spacing: .3px;
+    }
+
+    nav {
+      background: white;
+      height: 70px;
+      padding: 0 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #1769e0;
+    }
+
+    nav a {
+      text-decoration: none;
+      background: #1769e0;
+      color: white;
+      padding: 11px 18px;
+      border-radius: 7px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0d2b52, #1769e0);
+      color: white;
+      padding: 75px 7%;
+    }
+
+    .hero-container {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      line-height: 1.08;
+      margin: 15px 0;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #e8f1ff;
+      max-width: 650px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: white;
+      color: #0d2b52;
+      padding: 14px 23px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .support-line {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .form-card {
+      background: white;
+      color: #14213d;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.2);
+    }
+
+    .form-card h2 {
+      margin-top: 0;
+    }
+
+    .form-card p {
+      color: #5b6575;
+      font-size: 15px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 13px;
+      margin: 7px 0;
+      border: 1px solid #d6dce5;
+      border-radius: 6px;
+      background: white;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      background: #1769e0;
+      color: white;
+      padding: 14px;
+      border-radius: 7px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    section {
+      padding: 65px 7%;
+      background: white;
+    }
+
+    .grey {
+      background: #f6f8fb;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 35px;
+      color: #5b6575;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .box {
+      padding: 25px;
+      border: 1px solid #e0e5ed;
+      border-radius: 12px;
+      background: white;
+    }
+
+    .box h3 {
+      margin-top: 0;
+    }
+
+    .box p {
+      color: #5b6575;
+    }
+
+    .support-box {
+      background: #eaf2ff;
+      border-left: 5px solid #1769e0;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 25px;
+    }
+
+    .support-box strong {
+      display: block;
+      font-size: 19px;
+      margin-bottom: 5px;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .plan {
+      background: white;
+      border: 1px solid #dfe5ef;
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    .plan.featured {
+      border: 2px solid #1769e0;
+    }
+
+    .price {
+      font-size: 23px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .plan ul {
+      padding-left: 18px;
+      color: #5b6575;
+    }
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      padding: 18px 0;
+      border-bottom: 1px solid #e1e5eb;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .bottom-cta {
+      background: #0d2b52;
+      color: white;
+      text-align: center;
+    }
+
+    .bottom-cta p {
+      color: #dbe8ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: white;
+      color: #6b7280;
+      font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+
+      .hero-container,
+      .grid,
+      .plans {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 50px 6%;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav {
+        padding: 0 5%;
+      }
+
+      nav a {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sample-banner">
+    SAMPLE CONCEPT — PREPARED FOR V.S.L CONCEPTS APPLICATION • NOT AN OFFICIAL LIVE V.S.L PAGE
+  </div>
+
+  <nav>
+    <div class="logo">
+      V.S.L <span>CONCEPTS</span>
+    </div>
+
+    <a href="#form">
+      Talk to a Real Person
+    </a>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-container">
+
+      <div>
+
+        <div class="eyebrow">
+          BUSINESS • WORDPRESS • E-COMMERCE
+        </div>
+
+        <h1>
+          Fast, Secure Hosting With Real Human Support 24/7
+        </h1>
+
+        <p>
+          Your website shouldn't be left waiting for help.
+          Get reliable hosting with the support you need,
+          whenever you need it.
+        </p>
+
+        <a href="#form" class="cta">
+          Find My Hosting Plan
+        </a>
+
+        <div class="support-line">
+          ✓ 99.9% Uptime &nbsp; ✓ Free SSL &nbsp; ✓ 24/7 Real Customer Support
+        </div>
+
+      </div>
+
+
+      <!-- LEAD FORM -->
+
+      <div class="form-card" id="form">
+
+        <h2>
+          Get a Hosting Recommendation
+        </h2>
+
+        <p>
+          Tell us a little about your website and get matched
+          with a suitable hosting option.
+        </p>
+
+        <form onsubmit="submitDemo(event)">
+
+          <input
+            type="text"
+            placeholder="Your name"
+            required
+          >
+
+          <input
+            type="email"
+            placeholder="Email address"
+            required
+          >
+
+          <input
+            type="text"
+            placeholder="WhatsApp number"
+          >
+
+          <select required>
+            <option value="">
+              What type of website?
+            </option>
+
+            <option>Business website</option>
+            <option>WordPress website</option>
+            <option>E-commerce website</option>
+            <option>Blog</option>
+            <option>Other</option>
+          </select>
+
+          <select required>
+            <option value="">
+              How many websites?
+            </option>
+
+            <option>1</option>
+            <option>2–5</option>
+            <option>6+</option>
+          </select>
+
+          <button type="submit">
+            Get My Recommendation
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- VALUE PROPOSITION -->
+
+  <section>
+
+    <div class="container">
+
+      <h2>
+        Why Make Support Part of the Offer?
+      </h2>
+
+      <p class="intro">
+        Hosting is not only about storage and bandwidth.
+        For many small businesses, knowing that a real person
+        can help when something goes wrong is a major buying decision.
+      </p>
+
+
+      <div class="grid">
+
+        <div class="box">
+          <h3>Fast & Reliable</h3>
+
+          <p>
+            Lead with performance and reliability so prospects
+            understand the business value of dependable hosting.
+          </p>
+        </div>
+
+
+        <div class="box">
+
+          <h3>Real Human Help</h3>
+
+          <p>
+            Make 24/7 real customer support a visible
+            differentiator instead of hiding it inside a feature list.
+          </p>
+
+        </div>
+
+
+        <div class="box">
+
+          <h3>Right-Fit Plans</h3>
+
+          <p>
+            Use a short qualification form to guide prospects
+            toward the hosting option that fits their needs.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="support-box">
+
+        <strong>
+          Real People. Real Support. 24/7.
+        </strong>
+
+        When a website problem cannot wait, customers should
+        know there is a real support team available to help.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PLANS -->
+
+  <section class="grey">
+
+    <div class="container">
+
+      <h2>
+        Choose the Plan That Fits Your Website
+      </h2>
+
+      <p class="intro">
+        Illustrative campaign cards. Current V.S.L pricing
+        and promotions should be confirmed before publishing.
+      </p>
+
+
+      <div class="plans">
+
+        <div class="plan">
+
+          <h3>Starter</h3>
+
+          <div class="price">
+            ₦29,000/year
+          </div>
+
+          <ul>
+            <li>7GB storage</li>
+            <li>40GB bandwidth</li>
+            <li>Free SSL</li>
+            <li>24/7 support</li>
+          </ul>
+
+        </div>
+
+
+        <div class="plan">
+
+          <h3>Plus</h3>
+
+          <div class="price">
+            ₦40,000/year
+          </div>
+
+          <ul>
+            <li>14GB storage</li>
+            <li>100GB bandwidth</li>
+            <li>Free SSL</li>
+            <li>24/7 support</li>
+          </ul>
+
+        </div>
+
+
+        <div class="plan featured">
+
+          <h3>Deluxe</h3>
+
+          <div class="price">
+            ₦51,000/year
+          </div>
+
+          <ul>
+            <li>30GB storage</li>
+            <li>Unlimited bandwidth</li>
+            <li>10 addon domains</li>
+            <li>24/7 support</li>
+          </ul>
+
+        </div>
+
+
+        <div class="plan">
+
+          <h3>Ultimate</h3>
+
+          <div class="price">
+            ₦62,000/year
+          </div>
+
+          <ul>
+            <li>Unlimited storage</li>
+            <li>Unlimited bandwidth</li>
+            <li>20 addon domains</li>
+            <li>24/7 support</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FUNNEL -->
+
+  <section>
+
+    <div class="container">
+
+      <h2>
+        From Ad Click to Customer
+      </h2>
+
+      <p class="intro">
+        This landing page is designed as a campaign destination,
+        not simply as another website page.
+      </p>
+
+
+      <div class="grid">
+
+        <div class="box">
+
+          <h3>
+            01 — Attract
+          </h3>
+
+          <p>
+            A Meta or Google Search ad addresses
+            a specific hosting problem.
+          </p>
+
+        </div>
+
+
+        <div class="box">
+
+          <h3>
+            02 — Capture
+          </h3>
+
+          <p>
+            The prospect completes the short form
+            or starts a support conversation.
+          </p>
+
+        </div>
+
+
+        <div class="box">
+
+          <h3>
+            03 — Convert
+          </h3>
+
+          <p>
+            Sales qualifies the lead, recommends a plan
+            and follows through to payment.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="grey">
+
+    <div class="container">
+
+      <h2>
+        Questions Before You Choose?
+      </h2>
+
+      <div class="faq">
+
+        <div class="faq-item">
+
+          <strong>
+            Do I need technical skills?
+          </strong>
+
+          <p>
+            The page can reassure beginners that support
+            is available to guide them through their hosting needs.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <strong>
+            Can I move an existing website?
+          </strong>
+
+          <p>
+            Prospects can be directed to the support team
+            for migration assistance.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <strong>
+            Not sure which plan is right?
+          </strong>
+
+          <p>
+            Use the recommendation form to identify
+            the best fit before purchase.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+
+  <section class="bottom-cta">
+
+    <div class="container">
+
+      <h2>
+        Need Help Choosing Your Hosting?
+      </h2>
+
+      <p>
+        Talk to a real support person and get help
+        finding the right option.
+      </p>
+
+      <a href="#form" class="cta">
+        Talk to a Real Person 24/7
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    Sample portfolio concept by Tolulade Afolabi
+    • Prepared for V.S.L Concepts application
+
+  </footer>
+
+
+  <script>
+
+    function submitDemo(event) {
+
+      event.preventDefault();
+
+      alert(
+        "Demo form: In a live campaign, this form would send the lead to the CRM, WhatsApp or lead-routing workflow."
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    V.S.L Concepts | Reseller Hosting
+  </title>
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #14213d;
+      background: #f6f8fb;
+      line-height: 1.6;
+    }
+
+    .sample-banner {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 12px;
+    }
+
+    nav {
+      height: 70px;
+      background: white;
+      padding: 0 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #1769e0;
+    }
+
+    nav a {
+      background: #1769e0;
+      color: white;
+      text-decoration: none;
+      padding: 11px 18px;
+      border-radius: 7px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0d2b52, #1769e0);
+      color: white;
+      padding: 75px 7%;
+    }
+
+    .hero-container {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1.4px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.08;
+      margin: 15px 0;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #e8f1ff;
+    }
+
+    .cta {
+      display: inline-block;
+      background: white;
+      color: #0d2b52;
+      padding: 14px 23px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .support-line {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .form-card {
+      background: white;
+      color: #14213d;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.2);
+    }
+
+    .form-card h2 {
+      margin-top: 0;
+    }
+
+    .form-card p {
+      color: #5b6575;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 13px;
+      margin: 7px 0;
+      border: 1px solid #d6dce5;
+      border-radius: 6px;
+      background: white;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      background: #1769e0;
+      color: white;
+      padding: 14px;
+      border-radius: 7px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    section {
+      padding: 65px 7%;
+      background: white;
+    }
+
+    .grey {
+      background: #f6f8fb;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 35px;
+      color: #5b6575;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .box {
+      padding: 25px;
+      border: 1px solid #e0e5ed;
+      border-radius: 12px;
+      background: white;
+    }
+
+    .box h3 {
+      margin-top: 0;
+    }
+
+    .box p {
+      color: #5b6575;
+    }
+
+    .support-box {
+      background: #eaf2ff;
+      border-left: 5px solid #1769e0;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 25px;
+    }
+
+    .support-box strong {
+      display: block;
+      font-size: 19px;
+    }
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e1e5eb;
+      padding: 18px 0;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .bottom-cta {
+      background: #0d2b52;
+      color: white;
+      text-align: center;
+    }
+
+    .bottom-cta p {
+      color: #dbe8ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: white;
+      color: #6b7280;
+      font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+
+      .hero-container,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav {
+        padding: 0 5%;
+      }
+
+      nav a {
+        display: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <div class="sample-banner">
+
+    SAMPLE CONCEPT — PREPARED FOR V.S.L CONCEPTS APPLICATION
+    • NOT AN OFFICIAL LIVE V.S.L PAGE
+
+  </div>
+
+
+  <nav>
+
+    <div class="logo">
+      V.S.L <span>CONCEPTS</span>
+    </div>
+
+    <a href="#form">
+      Talk to a Real Person
+    </a>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-container">
+
+      <div>
+
+        <div class="eyebrow">
+          FOR WEB DESIGNERS • DEVELOPERS • AGENCIES
+        </div>
+
+        <h1>
+          Turn Your Web Design Clients Into Recurring Hosting Revenue
+        </h1>
+
+        <p>
+          Host multiple client websites with a reseller solution
+          backed by real human technical support 24/7 — so hosting
+          problems don't always become your problem.
+        </p>
+
+        <a href="#form" class="cta">
+          Explore Reseller Hosting
+        </a>
+
+        <div class="support-line">
+          ✓ Multiple Websites &nbsp;
+          ✓ Reseller Hosting &nbsp;
+          ✓ 24/7 Real Customer Support
+        </div>
+
+      </div>
+
+
+      <!-- FORM -->
+
+      <div class="form-card" id="form">
+
+        <h2>
+          Is Reseller Hosting Right for You?
+        </h2>
+
+        <p>
+          Answer a few questions so Sales can understand
+          your setup and hosting needs.
+        </p>
+
+        <form onsubmit="submitDemo(event)">
+
+          <input
+            type="text"
+            placeholder="Your name"
+            required
+          >
+
+          <input
+            type="email"
+            placeholder="Email address"
+            required
+          >
+
+          <input
+            type="text"
+            placeholder="WhatsApp number"
+          >
+
+          <select required>
+
+            <option value="">
+              Your role?
+            </option>
+
+            <option>
+              Web designer
+            </option>
+
+            <option>
+              Developer
+            </option>
+
+            <option>
+              Digital agency
+            </option>
+
+            <option>
+              Freelancer
+            </option>
+
+          </select>
+
+
+          <select required>
+
+            <option value="">
+              How many client websites?
+            </option>
+
+            <option>
+              1–5
+            </option>
+
+            <option>
+              6–20
+            </option>
+
+            <option>
+              21–50
+            </option>
+
+            <option>
+              50+
+            </option>
+
+          </select>
+
+
+          <button type="submit">
+            Talk to a Reseller Expert
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- MAIN VALUE PROPOSITION -->
+
+  <section>
+
+    <div class="container">
+
+      <h2>
+        Your Clients Need Support. We've Got You Covered.
+      </h2>
+
+      <p class="intro">
+        Reseller hosting creates an opportunity to build recurring
+        revenue, but support can become a headache. A strong landing
+        page should make V.S.L's 24/7 real customer support part
+        of the value proposition.
+      </p>
+
+
+      <div class="grid">
+
+        <div class="box">
+
+          <h3>
+            Build Recurring Revenue
+          </h3>
+
+          <p>
+            Package hosting with your website, development or
+            digital services and create an additional recurring
+            revenue stream.
+          </p>
+
+        </div>
+
+
+        <div class="box">
+
+          <h3>
+            Manage More Websites
+          </h3>
+
+          <p>
+            Position reseller hosting around agencies and freelancers
+            who need to manage multiple client websites.
+          </p>
+
+        </div>
+
+
+        <div class="box">
+
+          <h3>
+            Don't Carry Support Alone
+          </h3>
+
+          <p>
+            Make 24/7 real customer support a key reason
+            for choosing the platform.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="support-box">
+
+        <strong>
+          Real People. Real Support. 24/7.
+        </strong>
+
+        Your clients may contact you first when a hosting issue
+        appears. Give yourself a support team you can turn to.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TARGET AUDIENCE -->
+
+  <section class="grey">
+
+    <div class="container">
+
+      <h2>
+        Who Should This Campaign Target?
+      </h2>
+
+      <p class="intro">
+        Separate ad sets can test these audiences instead of
+        treating every hosting prospect the same.
+      </p>
+
+
+      <div class="grid">
+
+        <div class="box">
+
+          <h3>
+            Web Designers
+          </h3>
+
+          <p>
+            Pitch hosting as an add-on after delivering
+            a website to a client.
+          </p>
+
+        </div>
+
+
+        <div class="box">
+
+          <h3>
+            Developers
+          </h3>
+
+          <p>
+            Focus on managing several client deployments
+            while having technical support available.
+          </p>
+
+        </div>
+
+
+        <div class="box">
+
+          <h3>
+            Digital Agencies
+          </h3>
+
+          <p>
+            Position reseller hosting as infrastructure
+            for recurring client services.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAMPAIGN FUNNEL -->
+
+  <section>
+
+    <div class="container">
+
+      <h2>
+        Campaign Funnel
+      </h2>
+
+      <div class="grid">
+
+        <div class="box">
+
+          <h3>
+            01 — Target
+          </h3>
+
+          <p>
+            Meta ads reach web designers, developers,
+            freelancers and agencies.
+          </p>
+
+        </div>
+
+
+        <div class="box">
+
+          <h3>
+            02 — Qualify
+          </h3>
+
+          <p>
+            The landing page asks about role, number
+            of client websites and current needs.
+          </p>
+
+        </div>
+
+
+        <div class="box">
+
+          <h3>
+            03 — Close
+          </h3>
+
+          <p>
+            Sales follows up quickly, recommends a reseller
+            plan and handles objections.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="grey">
+
+    <div class="container">
+
+      <h2>
+        Common Questions
+      </h2>
+
+      <div class="faq">
+
+        <div class="faq-item">
+
+          <strong>
+            Can I host multiple client websites?
+          </strong>
+
+          <p>
+            Use the actual V.S.L plan limits and resources
+            here once confirmed for the campaign.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <strong>
+            Will my clients know I'm using reseller hosting?
+          </strong>
+
+          <p>
+            Explain the branding and account features available
+            on the selected reseller plan.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <strong>
+            What happens when I need technical help?
+          </strong>
+
+          <p>
+            Make V.S.L's 24/7 real customer support
+            the clear answer.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="bottom-cta">
+
+    <div class="container">
+
+      <h2>
+        Ready to Grow Your Hosting Revenue?
+      </h2>
+
+      <p>
+        Tell us how many client websites you manage
+        and start a conversation with a reseller expert.
+      </p>
+
+      <a href="#form" class="cta">
+        Talk to a Reseller Expert
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    Sample portfolio concept by Tolulade Afolabi
+    • Prepared for V.S.L Concepts application
+
+  </footer>
+
+
+  <script>
+
+    function submitDemo(event) {
+
+      event.preventDefault();
+
+      alert(
+        "Demo form: In a live campaign, this form would send the lead to the CRM, WhatsApp or lead-routing workflow."
+      );
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
